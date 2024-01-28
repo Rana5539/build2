@@ -6,11 +6,13 @@ import Projects from './Components/Projects/Projects';
 import Sells from './Components/We deal in/Sells'
 import Scrolltop from './Components/Scrolltop'
 import Main from './Components/What we offer/Main';
-import Socialicons from './Components/Socialicons'
+import Partners from './Components/Partners/Partners';
+import Footer from './Components/Footer/Footer';
+
 function App() {
   return (
     <>
-    <Socialicons/>
+    
     <Responsive/>
     <Navbar/>
     <Jumbotron/>
@@ -18,6 +20,8 @@ function App() {
     <Sells/>
    <Scrolltop/>
    <Main/>
+   <Partners/>
+   <Footer/>
     </>
   );
 }

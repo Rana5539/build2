@@ -1,4 +1,3 @@
-// ScrollToTop.js
 import React, { useState, useEffect } from 'react';
 import KeyboardDoubleArrowUpRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowUpRounded';
 const ScrollToTop = () => {
@@ -6,7 +5,7 @@ const ScrollToTop = () => {
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    setIsVisible(scrollY > 300); // Adjust the threshold as needed
+    setIsVisible(scrollY > 300); 
   };
 
   const scrollToTop = () => {
@@ -32,7 +31,7 @@ const ScrollToTop = () => {
         cursor: 'pointer',
         opacity: isVisible ? 1 : 0,
         transition: 'opacity 0.3s ease',
-       
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',borderRadius:'100%'
       }}
       onClick={scrollToTop}
     >

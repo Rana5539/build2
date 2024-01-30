@@ -5,7 +5,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import { useSpring, animated } from 'react-spring';
-
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const arr = [
   { text: 'Small', text1: 'Offices' },
   { text: 'New', text1: 'Offices' },
@@ -65,6 +67,9 @@ function a11yProps(index) {
 }
 
 export default function Comm() {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -73,6 +78,7 @@ export default function Comm() {
 
   return (
     <>
+    <div data-aos='fade-up'>
       <Box sx={{ width: 'auto', p: 1, borderRadius: '15px',  border:'1px solid rgb(133, 212, 238)', }}>
         <Typography sx={{ fontFamily: 'Poppins', fontSize: '20px', fontWeight: '500', alignItems: 'center', display: 'flex', justifyContent: 'center' }}>
           <ApartmentIcon sx={{ mr: 1, fontSize: '30px', color: 'dodgerblue' }} />
@@ -120,6 +126,7 @@ export default function Comm() {
           </CustomTabPanel>
         </Box>
       </Box>
+      </div>
     </>
   );
 }

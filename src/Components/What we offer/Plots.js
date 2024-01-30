@@ -5,6 +5,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import MapIcon from '@mui/icons-material/Map';
 import { useSpring, animated } from 'react-spring';
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const arr = [{text:'5 Marla',text1:'Residential Plots'},
 {text:'10 Marla',text1:'Residential Plots'},
 {text:'Developed',text1:'Residential Plots'},
@@ -54,6 +57,9 @@ function a11yProps(index) {
 }
 
 export default function Comm() {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -62,6 +68,7 @@ export default function Comm() {
 
   return (
     <>
+    <div data-aos='fade-up'>
       <Box sx={{ width: 'auto', p: 1, borderRadius: '15px', border:'1px solid rgb(133, 212, 238)','@media screen and (max-width : 1150px) ' :{
         mt:2
       }}}>
@@ -109,7 +116,7 @@ export default function Comm() {
             </Box>
           </CustomTabPanel>
         </Box>
-      </Box>
+      </Box></div>
     </>
   );
 }

@@ -5,10 +5,16 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import Rating from '@mui/material/Rating';
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const img = require('./images/Rectangle 19.png')
 const img1 = require('./images/Rectangle 20.png')
 const img2 = require('./images/Rectangle 21.png')
 function Cards() {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
     const [value] = React.useState(4);
   return (
     <>
@@ -23,7 +29,7 @@ function Cards() {
         '@media screen and (max-width: 1170px)':{
             flexDirection:"column",
         }}} >
-    <Card sx={{ 
+    <div data-aos="flip-right"><Card sx={{ 
         maxWidth: 345, 
         border:'1px solid rgb(133, 212, 238)',
         borderRadius:'15px',
@@ -65,8 +71,9 @@ function Cards() {
   },}}>View</Button>
      </CardContent>
    </Card>
-
+   </div>
    {/* card 2 */}
+   <div data-aos="zoom-in">
    <Card sx={{ 
     maxWidth: 345, 
     border:'1px solid rgb(133, 212, 238)',
@@ -110,8 +117,9 @@ function Cards() {
     border:'none'
   },}}>View</Button>
      </CardContent>
-   </Card>
+   </Card></div>
    {/* card 3 */}
+   <div data-aos="flip-left">
    <Card sx={{ 
     maxWidth: 345, 
     border:'1px solid rgb(133, 212, 238)',
@@ -155,7 +163,7 @@ function Cards() {
     border:'none'
   },}}>View</Button>
      </CardContent>
-   </Card>
+   </Card></div>
 
     </Box>
    

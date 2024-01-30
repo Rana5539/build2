@@ -8,7 +8,7 @@ import Scrolltop from './Components/Scrolltop'
 import Main from './Components/What we offer/Main';
 import Partners from './Components/Partners/Partners';
 import Footer from './Components/Footer/Footer';
-
+import Deal from './Components/We deal/Deal'
 function App() {
   return (
     <>
@@ -20,8 +20,11 @@ function App() {
     <Sells/>
    <Scrolltop/>
    <Main/>
+   <Deal/>
    <Partners/>
+  
    <Footer/>
+   
     </>
   );
 }

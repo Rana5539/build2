@@ -31,11 +31,12 @@ const ScrollToTop = () => {
         cursor: 'pointer',
         opacity: isVisible ? 1 : 0,
         transition: 'opacity 0.3s ease',
-        backgroundColor: 'rgba(0, 0, 0, 0.4)',borderRadius:'100%'
+        color: 'rgba(251, 217, 185, 1)',
+       
       }}
       onClick={scrollToTop}
     >
-      <KeyboardDoubleArrowUpRoundedIcon sx={{fontSize:'50px',color:' rgba(251, 217, 185, 1)'}} />
+      <KeyboardDoubleArrowUpRoundedIcon sx={{fontSize:'50px'}} />
     </div>
   );
 };

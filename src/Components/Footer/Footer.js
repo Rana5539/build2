@@ -1,4 +1,4 @@
-import { Box, Link, Typography } from '@mui/material'
+import { Box, IconButton, Link, Typography } from '@mui/material'
 import React from 'react'
 import { Instagram, Facebook, LinkedIn } from '@mui/icons-material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
@@ -21,9 +21,24 @@ function Footer() {
         <Box sx={{m:'auto',width:'15%',alignItems:'center',justifyContent:'space-between',display:'flex',mt:3,'@media screen and (max-width:750px)':{
             width:'40%'
         }}}>
+          <IconButton
+          href='https://www.instagram.com/itxrana_waqar/'
+          target="_blank"
+      rel="noopener noreferrer">
         <Instagram sx={{color:'white',fontSize:'30px'}} />
+        </IconButton>
+        <IconButton
+         href='https://www.facebook.com/profile.php?id=100076756789132'
+         target="_blank"
+     rel="noopener noreferrer">
         <Facebook sx={{color:'white',fontSize:'30px'}} />
+        </IconButton>
+        <IconButton
+        href='https://www.linkedin.com/in/waqar-akram-396b36208/'
+        target='_black'
+        rel='nooopener noreferrer'>
         <LinkedIn sx={{color:'white',fontSize:'30px'}} />
+        </IconButton>
         </Box>
        
         <Typography sx={{color:'grey',display:'flex',textAlign:'center',justifyContent:'center',alignItems:'center',mt:2,fontFamily:'Poppins',fontSize:'14px'}}>Copyright <CopyrightIcon sx={{ml:0.5,mr:0.5,fontSize:'20px'}}/>2024. All rights reserved</Typography>

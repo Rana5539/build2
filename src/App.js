@@ -9,6 +9,7 @@ import Main from './Components/What we offer/Main';
 import Partners from './Components/Partners/Partners';
 import Footer from './Components/Footer/Footer';
 import Deal from './Components/We deal/Deal'
+import Contactus from './Components/Contact/Contactus'
 function App() {
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
    <Partners/>
   
    <Footer/>
-   
+   <Contactus/>
     </>
   );
 }

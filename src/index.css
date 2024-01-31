@@ -3,8 +3,24 @@ body{
   padding: 0%;
 }
 .bg{
-  background-image: url(/src/Components/pngwing.com\ \(16\).png);
+  background-image: url(/src/Components/p1.png);
 background-size: cover;
 background-position: center;
 
+}
+.bg2 {
+  position: relative;
+}
+
+.bg2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/src/Components/pngwing.com (16).png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Set the opacity value (0.5 in this example) */
 }

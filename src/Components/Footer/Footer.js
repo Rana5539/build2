@@ -6,17 +6,22 @@ function Footer() {
   return (
     <>
     
-    <Box sx={{width:'100%',bgcolor:'black'}}>
+    <Box sx={{width:'100%',bgcolor:'black','@media screen and (max-width: 850px)':{
+          mt:60
+      }}}>
     <Typography sx={{pt:4,textAlign:'center',color:'white', fontFamily: 'Tilt Neon', fontSize:'35px'}}>Build</Typography>
         <Box sx={{m:'auto',alignItems:'center',justifyContent:'space-between',display:'flex',width:'40%',mt:2,'@media screen and (max-width: 1000px)':{
             flexDirection:'column',
             gap:'10px'
-        }}}>
-<Link sx={{textDecoration:'none',color:'grey',fontSize:'18px',fontFamily:"Inria Sans",cursor:'pointer'}}>Home</Link>
-<Link sx={{textDecoration:'none',color:'grey',fontSize:'18px',fontFamily:"Inria Sans",cursor:'pointer'}}>About us</Link>
-<Link sx={{textDecoration:'none',color:'grey',fontSize:'18px',fontFamily:"Inria Sans",cursor:'pointer'}}>Contact us</Link>
-<Link sx={{textDecoration:'none',color:'grey',fontSize:'18px',fontFamily:"Inria Sans",cursor:'pointer'}}>Projects</Link>
-<Link sx={{textDecoration:'none',color:'grey',fontSize:'18px',fontFamily:"Inria Sans",cursor:'pointer'}}>Services</Link>
+        },
+        }}>
+<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }} >Home</Link>
+<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }} >About us</Link>
+<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }} >Contact us</Link>
+<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }}>Projects</Link>
+<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }} > Services
+</Link>
+
         </Box>
         <Box sx={{m:'auto',width:'15%',alignItems:'center',justifyContent:'space-between',display:'flex',mt:3,'@media screen and (max-width:750px)':{
             width:'40%'

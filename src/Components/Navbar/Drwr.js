@@ -6,6 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import { Link } from 'react-router-dom';
 const StyledMenu = styled((props) => (
   <Menu
     elevation={0}
@@ -86,32 +87,32 @@ export default function CustomizedMenus() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
+        <MenuItem component={Link} to="/" onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',mt:2,fontSize:'18px'}}> 
           Home
         </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
+        <MenuItem component={Link} to="/about" onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',fontSize:'18px'}}>
           
           About us
         </MenuItem>
         
-        <MenuItem onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
+        <MenuItem component={Link} to="/contact" onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',fontSize:'18px'}}>
         
           Contact us
         </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
+        <MenuItem component={Link} to="/project" onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',fontSize:'18px'}}>
          
           Projects
         </MenuItem>
         <Divider variant='middle' sx={{borderColor:'gray'}}/>
-        <MenuItem onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
+        <MenuItem component={Link} to='/service' onClick={handleClose} disableRipple sx={{fontFamily:'Poppins',display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',fontSize:'18px'}}>
          

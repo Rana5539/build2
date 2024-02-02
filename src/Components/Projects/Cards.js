@@ -42,7 +42,7 @@ function Cards() {
         width:'90%',
         height:'auto',
         mx:'auto',
-        mt:4,
+        mt:4,mb:3,
         alignItems:'center',
         '@media screen and (max-width: 1170px)':{
             flexDirection:"column",

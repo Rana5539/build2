@@ -1,15 +1,15 @@
-import { Box, Button, IconButton, Typography } from '@mui/material'
+import { Box, IconButton, Typography } from '@mui/material'
 import React from 'react'
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded';
 import { CopyrightRounded, Facebook, Instagram, LinkedIn } from '@mui/icons-material';
 import PublicIcon from '@mui/icons-material/Public';
-import { TextField, InputAdornment } from '@mui/material';
-import { AccountCircle } from '@mui/icons-material';
-import PersonIcon from '@mui/icons-material/Person';
-import EmailIcon from '@mui/icons-material/Email';
-import { Message } from '@mui/icons-material';
+import An from './An'
+import Responsive from '../Navbar/Responsive';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
+import ScrollToTop from '../Scrolltop';
 
 const arr = [{ text: 'CCA DHA phase 6, plaza no. 8,\nfloor 2, office 3',icon : <LocationOnRoundedIcon sx={{marginRight:2,fontSize:'35px',color:'blue'}}/> },
 { text: '+923074613828',icon : <LocalPhoneRoundedIcon sx={{marginRight:2,fontSize:'35px',color:'blue'}}/> },
@@ -17,10 +17,15 @@ const arr = [{ text: 'CCA DHA phase 6, plaza no. 8,\nfloor 2, office 3',icon : <
 { text: 'www.realstate.com',icon : <PublicIcon sx={{marginRight:2,fontSize:'35px',color:'blue'}}/> }];
 
 function Contactus() {
+  
+  
   return (
     <>
-    <Box sx={{width:'100%',display:'flex',height:'100vh','@media screen and (max-width: 850px)':{
-            flexDirection:"column",
+    <ScrollToTop/>
+    <Responsive/>
+      <Navbar/>
+    <Box sx={{width:'100%',display:'flex',height:'100vh',mt:5,'@media screen and (max-width: 850px)':{
+            flexDirection:"column"
         }}}>
     
     
@@ -67,138 +72,13 @@ function Contactus() {
     
     <Box sx={{width:'65%',height:'auto',bgcolor:'whitesmok','@media screen and (max-width:850px)':{
            textAlign:'center',
-           ml:0,
+          
            justifyContent:'center',alignItems:'center',width:'100%'
            },}}>
-    <Typography sx={{mt:5,color:'black',fontSize:'25px',fontFamily:'Poppins',fontWeight:'500',ml:15,'@media screen and (max-width : 450px)':{
-        textAlign:'center',
-        ml:0
-        },
-        '@media screen and (max-width:850px)':{
-           textAlign:'center',
-           ml:0
-           },}}>Get in touch</Typography>
- <TextField
-      variant="outlined"
-      placeholder="Name"
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <PersonIcon />
-          </InputAdornment>
-        ),
-        style: {
-          borderRadius: '40px',
-          
-        },
-        sx: {ml:15,mt:3,width:'60vh',height:'7vh','@media screen and (max-width:1070px)':{
-         width:'50vh'
-        },
-        '@media screen and (max-width:940px)':{
-            width:'45vh'
-           },
-           '@media screen and (max-width:850px)':{
-            ml:0
-            },
-            '@media screen and (max-width:450px)':{
-                width:'35vh'
-                 },
-          '&:hover': {
-            background: 'none',
-          },
-          '& input::placeholder': {
-            fontFamily: 'Poppins'
-          },
-        },
-      }}
-    />
-    <br/>
-     <TextField
-      variant="outlined"
-      placeholder="Email"
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <EmailIcon />
-          </InputAdornment>
-        ),
-        style: {
-          borderRadius: '40px',
-          
-        },
-        sx: {ml:15,mt:4,width:'60vh',height:'7vh','@media screen and (max-width:1070px)':{
-            width:'50vh'
-           },
-           '@media screen and (max-width:940px)':{
-            width:'45vh'
-           },
-           '@media screen and (max-width:850px)':{
-            ml:0
-            },
-            '@media screen and (max-width:450px)':{
-                width:'35vh'
-                 },
-          '&:hover': {
-            background: 'none',
-          },
-          '& input::placeholder': {
-            fontFamily: 'Poppins'
-          },
-        },
-      }}
-    /><br/>
-     <TextField
-      multiline
-      minRows={8}
-      maxRows={20}
-      placeholder="Message"
-      variant="outlined"
-      InputProps={{
-        
-        style: {
-          borderRadius: '10px',
-        },
-      }}
-      sx={{width:'60vh',ml:15, mt:4,'@media screen and (max-width:1070px)':{
-        width:'50vh'
-       },
-       '@media screen and (max-width:940px)':{
-        width:'45vh'
-       },
-       '@media screen and (max-width:850px)':{
-        ml:0,
-        mx:'auto'
-        },
-        '@media screen and (max-width:450px)':{
-           width:'35vh'
-            },
-        '& textarea': {
-          resize: 'none',
-          fontFamily: 'Poppins',
-        },
-        '&:hover': {
-          background: 'none',
-        },
-        
-      }}
-    /><br/>
-     <Button variant='outlined' sx={{
-        textTransform:'none',
-        fontFamily:'Poppins',
-        color:'black',
-        fontSize:"16px",
-        bgcolor:'blue',
-        border:'none',
-        mt:2,ml:15,color:'white','@media screen and (max-width:850px)':{
-            ml:0,
-            
-            },
-        borderRadius:"20px",':hover': {
-    bgcolor:'blue',
-    border:'none',
-  },}}>Message</Button>
+   <An/>
     </Box>
        </Box>
+       <Footer/>
         </>
   )
 }

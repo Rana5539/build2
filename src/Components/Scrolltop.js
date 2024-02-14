@@ -31,7 +31,7 @@ const ScrollToTop = () => {
         cursor: 'pointer',
         opacity: isVisible ? 1 : 0,
         transition: 'opacity 0.3s ease',
-        color: 'rgba(251, 217, 185, 1)',
+        color: 'dodgerblue',
        
       }}
       onClick={scrollToTop}

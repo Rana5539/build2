@@ -1,5 +1,6 @@
-import { Box, IconButton, Link, Typography } from '@mui/material'
+import { Box, Button, IconButton, Typography } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { Instagram, Facebook, LinkedIn } from '@mui/icons-material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 function Footer() {
@@ -7,7 +8,7 @@ function Footer() {
     <>
     
     <Box sx={{width:'100%',bgcolor:'black','@media screen and (max-width: 850px)':{
-          mt:60
+          mt:3
       }}}>
     <Typography sx={{pt:4,textAlign:'center',color:'white', fontFamily: 'Tilt Neon', fontSize:'35px'}}>Build</Typography>
         <Box sx={{m:'auto',alignItems:'center',justifyContent:'space-between',display:'flex',width:'40%',mt:2,'@media screen and (max-width: 1000px)':{
@@ -15,12 +16,12 @@ function Footer() {
             gap:'10px'
         },
         }}>
-<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }} >Home</Link>
-<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }} >About us</Link>
-<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }} >Contact us</Link>
-<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }}>Projects</Link>
-<Link sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' }} > Services
-</Link>
+<Button to='/' component={Link} sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer',textTransform:'none' }} >Home</Button>
+<Button to='/about' component={Link} sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' ,textTransform:'none'}} >About us</Button>
+<Button to='/contact' component={Link} sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer',textTransform:'none' }} >Contact us</Button>
+<Button to='/project' component={Link} sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' ,textTransform:'none'}}>Projects</Button>
+<Button to='/service' component={Link} sx={{ textDecoration: 'none', color: 'grey', fontSize: '18px', fontFamily: "Inria Sans", cursor: 'pointer' ,textTransform:'none'}} > Services
+</Button>
 
         </Box>
         <Box sx={{m:'auto',width:'15%',alignItems:'center',justifyContent:'space-between',display:'flex',mt:3,'@media screen and (max-width:750px)':{

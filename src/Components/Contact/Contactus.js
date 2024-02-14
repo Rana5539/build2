@@ -21,10 +21,11 @@ function Contactus() {
   
   return (
     <>
+    
     <ScrollToTop/>
     <Responsive/>
       <Navbar/>
-    <Box sx={{width:'100%',display:'flex',height:'100vh',mt:5,'@media screen and (max-width: 850px)':{
+    <Box sx={{width:'100%',display:'flex',height:'autoa',mt:5,'@media screen and (max-width: 850px)':{
             flexDirection:"column"
         }}}>
     
@@ -79,6 +80,7 @@ function Contactus() {
     </Box>
        </Box>
        <Footer/>
+       
         </>
   )
 }

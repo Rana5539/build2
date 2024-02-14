@@ -10,10 +10,12 @@ import Footer from './Footer/Footer';
 import Deal from './We deal/Deal'
 import { Box } from '@mui/material';
 import './not.css'
+
 function App() {
     return (
       <>
-      <Box>
+      
+      
       <Responsive/>
       <Navbar/>
       <Jumbotron/>
@@ -24,7 +26,7 @@ function App() {
      <Deal/>
      <Partners/>
          <Footer/>
-         </Box>
+         
       </>
     );
   }

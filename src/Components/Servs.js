@@ -9,12 +9,14 @@ import Footer from './Footer/Footer'
 function Servs() {
   return (
     <>
+   
     <ScrollToTop/>
     <Navbar/>
     <Responsive/>
     <Sells/>
     <Partners/>
     <Footer/>
+    
     </>
   )
 }

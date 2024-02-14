@@ -1,21 +1,27 @@
 import React from 'react';
-import Home from './Components/Home'
 import { Routes, Route } from 'react-router-dom';
-import Contactus from './Components/Contact/Contactus';
 import Projectss from './Components/Projectss';
 import Servs from './Components/Servs';
+import Pagechangescroll from './Components/Pagechangescroll'
+import Home from './Components/Home'
+import Aboutus from './Components/Aboutus/Aboutus'
+import Contactus from './Components/Contact/Contactus'
 
 function App() {
   return (
     <>
+    <Pagechangescroll/>
+      <Routes>
     
-    <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contactus />} />
-        <Route path='/project' element={<Projectss/>}/>
-        <Route path='/service' element={<Servs/>}/>
-        </Routes>
-    </>
+        <Route path='/project' element={<Projectss />} />
+        <Route path='/service' element={<Servs />} />
+        <Route path='/about' element={<Aboutus />} />
+        
+    </Routes>
+     </>
+  
   );
 }
 export default App;

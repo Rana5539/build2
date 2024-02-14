@@ -8,11 +8,13 @@ import Responsive from './Navbar/Responsive'
 function Projectss() {
   return (
     <>
+   
     <ScrollToTop/>
     <Navbar/>
     <Responsive/>
     <Projects/>
     <Footer/>
+    
         </>
   )
 }

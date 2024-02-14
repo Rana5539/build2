@@ -11,6 +11,7 @@ import Fade from '@mui/material/Fade';
 import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 const img = require('./images/Rectangle 19.png')
 const img1 = require('./images/Rectangle 20.png')
 const img2 = require('./images/Rectangle 21.png')
@@ -216,7 +217,7 @@ function Cards() {
         borderRadius:"20px",':hover': {
     bgcolor:'rgba(251, 217, 185, 1)',
     border:'none'
-  },}}>Contact</Button>
+  },}} component={Link} to="/contact">Contact</Button>
           </Box>
         </Fade>
       </Modal>

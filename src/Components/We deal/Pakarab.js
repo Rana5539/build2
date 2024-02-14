@@ -21,7 +21,7 @@ function DHA() {
           mt:3,
         
       }}} className='bg'>
-           <Box sx={{m:'auto',display:'flex',justifyContent:'center',mt:5}}><img src={img} width={'50%'}></img></Box> 
+           <Box sx={{m:'auto',display:'flex',justifyContent:'center',mt:5}}><img src={img} width={'50%'} alt=''></img></Box> 
            <Typography sx={{fontSize:'30px',fontFamily:'Poppins',textAlign:'center',fontWeight:'500'}}> Pak Arab Hs</Typography>
            <Typography sx={{fontFamily:'Inria Sans',textAlign:'center',color:'grey'}}>Dealing in most demanding scheme <br/> Contact us to know more</Typography>
         </Box>
